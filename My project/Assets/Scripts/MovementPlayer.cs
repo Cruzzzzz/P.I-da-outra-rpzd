@@ -6,7 +6,7 @@ public class MovementPlayer : MonoBehaviour
     public Rigidbody2D rb;       // Referência ao Rigidbody2D
    
 
-    Vector2 movement; // Vetor de movimento
+    Vector2 movement; 
     private void Start()
     {
         rb.gravityScale = 0;
