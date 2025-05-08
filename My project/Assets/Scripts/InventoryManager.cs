@@ -1,18 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
+
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance; 
     private Dictionary<ItemType, int> inventory = new Dictionary<ItemType, int>();
 
-    [SerializeField] private Text moedaText;
-    [SerializeField] private Text chaveText;
-    [SerializeField] private Text pocaoVidaText;
-    [SerializeField] private Text pocaoManaText;
-    [SerializeField] private Text cristalText;
-    [SerializeField] private Text pergaminhoText;
+    [SerializeField] private TMP_Text troncoText;
+    [SerializeField] private TMP_Text cenouraText;
+    [SerializeField] private TMP_Text ouroText;
+    [SerializeField] private TMP_Text sementeText;
+    [SerializeField] private TMP_Text cogumeloText;
+    [SerializeField] private TMP_Text trigoText;
 
     private void Awake()
     {
@@ -38,14 +40,13 @@ public class InventoryManager : MonoBehaviour
     }
     private void UpdateUI()
     {
-        if (moedaText != null) moedaText.text = inventory[ItemType.Tronco].ToString();
-        if (chaveText != null) chaveText.text = inventory[ItemType.Cenoura].ToString();
-        if (pocaoVidaText != null) pocaoVidaText.text = inventory[ItemType.Ouro].ToString();
-        if (pocaoManaText != null) pocaoManaText.text = inventory[ItemType.Semente].ToString();
-        if (cristalText != null) cristalText.text = inventory[ItemType.Cogumelo].ToString();
-        if (pergaminhoText != null) pergaminhoText.text = inventory[ItemType.Trigo].ToString();
+        if (troncoText != null) troncoText.text = inventory[ItemType.Tronco].ToString();
+        if (cenouraText != null) cenouraText.text = inventory[ItemType.Cenoura].ToString();
+        if (ouroText != null) ouroText.text = inventory[ItemType.Ouro].ToString();
+        if (sementeText != null) sementeText.text = inventory[ItemType.Semente].ToString();
+        if (cogumeloText != null) cogumeloText.text = inventory[ItemType.Cogumelo].ToString();
+        if (trigoText != null) trigoText.text = inventory[ItemType.Trigo].ToString();
     }
-
     public int GetItemCount(ItemType type)
     {
         return inventory.ContainsKey(type) ? inventory[type] : 0;
