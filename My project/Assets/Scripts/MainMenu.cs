@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
         SceneManager.LoadScene("Cena principal");
 
-    }
+    }   
     public void Opcoes()
     {
         SceneManager.LoadScene("Opcoes");
