@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 032482989c8ddd347bcd84ac6a3a99a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opcoes: {fileID: 0}
 --- !u!4 &74289654
 Transform:
   m_ObjectHideFlags: 0
@@ -565,7 +564,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 74289653}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: Jogar
+        m_MethodName: Experimento
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

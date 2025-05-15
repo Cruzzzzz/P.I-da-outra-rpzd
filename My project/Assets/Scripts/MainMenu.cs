@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject opcoes;
+    
 
     public void Jogar()
     {
@@ -21,8 +21,6 @@ public class MainMenu : MonoBehaviour
     {
 
         SceneManager.LoadScene("Creditos");
-
-
     }
     public void Sair()
     {
@@ -32,6 +30,10 @@ public class MainMenu : MonoBehaviour
     public void ExitMenuPlayer()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    public void Experimento()
+    {
+        SceneManager.LoadScene("Experimento");
     }
 
 }
