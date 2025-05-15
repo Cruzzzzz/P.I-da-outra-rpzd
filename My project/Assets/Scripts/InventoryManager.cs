@@ -37,6 +37,7 @@ public class InventoryManager : MonoBehaviour
     {
         inventory[type]++;
         UpdateUI();
+        FindObjectOfType<VictoryCondition>()?.CheckVictoryCondition();
     }
     private void UpdateUI()
     {
