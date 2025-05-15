@@ -60,7 +60,7 @@ public class NPC_Dialogue : MonoBehaviour
     }
     void StartDialogue()
     {
-        nameNPC.text = "Marcos";
+        nameNPC.text = "";
         imageNPC.sprite = spriteNPC;
         startDialogue = true;
         dialogueIndex = 0;
