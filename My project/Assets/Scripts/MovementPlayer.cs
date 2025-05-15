@@ -2,25 +2,38 @@ using UnityEngine;
 
 public class MovementPlayer : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Velocidade de movimento
-    public Rigidbody2D rb;       // Referência ao Rigidbody2D
+    [SerializeField]public float moveSpeed = 5f; // Velocidade de movimento
+    [SerializeField] private float runSpeed = 10f; // Corrida
+    [SerializeField] private float speed; // Velocidade atual do player
+    public Rigidbody2D rb;
    
 
     Vector2 movement; 
     private void Start()
     {
         rb.gravityScale = 0;
+        speed = moveSpeed;
     }
     void Update()
     {
         // Entrada do teclado (Eixo horizontal e vertical)
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetButtonDown("Fire3"))
+        {
+            speed = runSpeed;
+        }
+        if (Input.GetButtonUp("Fire3"))
+        {
+            speed = moveSpeed;
+        }
+
     }
 
     void FixedUpdate()
     {
         // Movimento aplicado ao Rigidbody2D
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 }

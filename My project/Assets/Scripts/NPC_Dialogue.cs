@@ -9,10 +9,10 @@ public class NPC_Dialogue : MonoBehaviour
     public string[] dialogueNPC;
     public int dialogueIndex;
 
-    public GameObject dialoguePanel;
+    [SerializeField]private GameObject dialoguePanel;
     public TMP_Text dialogueText;
 
-    public TMP_Text nameNPC;
+    [SerializeField]private TMP_Text nameNPC;
     public Image imageNPC;
     public Sprite spriteNPC;
 

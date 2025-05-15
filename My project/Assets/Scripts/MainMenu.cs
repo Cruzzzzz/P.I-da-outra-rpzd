@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour
     public void Sair()
     {
         Application.Quit();
-        Debug.Log("Saiu Do Gamezada");
+        Debug.Log("Saiu Do Game");
     }
     public void ExitMenuPlayer()
     {
