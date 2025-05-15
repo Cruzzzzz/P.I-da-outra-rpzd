@@ -6,16 +6,13 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] private float runSpeed = 10f; // Corrida
     [SerializeField] private float speed; // Velocidade atual do player
     public Rigidbody2D rb;
-    [SerializeField] Animator anim;
-
+   
 
     Vector2 movement; 
     private void Start()
     {
         rb.gravityScale = 0;
         speed = moveSpeed;
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
     }
     void Update()
     {
@@ -31,9 +28,7 @@ public class MovementPlayer : MonoBehaviour
         {
             speed = moveSpeed;
         }
-        anim.SetFloat("Horizontal", movement.x);
-        anim.SetFloat("Vertical", movement.y);
-        anim.SetFloat("Speed", movement.sqrMagnitude);
+
     }
 
     void FixedUpdate()
