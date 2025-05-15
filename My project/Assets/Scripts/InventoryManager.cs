@@ -37,7 +37,10 @@ public class InventoryManager : MonoBehaviour
     {
         inventory[type]++;
         UpdateUI();
-        FindObjectOfType<VictoryCondition>()?.CheckVictoryCondition();
+        if (GameController.instance != null && GameController.instance.victoryCondition != null)
+        {
+            GameController.instance.victoryCondition.CheckVictoryCondition();
+        }
     }
     private void UpdateUI()
     {
