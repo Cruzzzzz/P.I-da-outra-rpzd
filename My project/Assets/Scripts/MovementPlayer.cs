@@ -9,7 +9,10 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] Animator anim;
 
 
-    Vector2 movement; 
+    Vector2 movement;
+
+    public float Speed { get => speed; set => speed = value; }
+
     private void Start()
     {
         rb.gravityScale = 0;

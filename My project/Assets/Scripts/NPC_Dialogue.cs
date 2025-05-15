@@ -34,6 +34,7 @@ public class NPC_Dialogue : MonoBehaviour
             if (!startDialogue)
             {
                 FindAnyObjectByType<MovementPlayer>().moveSpeed = 0f;
+                FindAnyObjectByType<MovementPlayer>().Speed = 0f;
                 StartDialogue();
             }
             else if (dialogueText.text == dialogueNPC[dialogueIndex])
